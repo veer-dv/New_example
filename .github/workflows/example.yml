@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sample-artifact
-          path: sample.txt
+          path: ${{ github.workspace }}
 
 
   deploy:
@@ -34,9 +34,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: sample-artifact
+          path: ${{ github.workspace }}
 
       - name: Deploy the artifact (example deployment)
         run: |
           echo "Deploying artifact..."
           # Replace this with actual deployment logic (e.g., copying files, deploying to a server)
-          cp sample.txt D:\example\
+          # cp sample.txt D:\example\
