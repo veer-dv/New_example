@@ -2,18 +2,16 @@ name: github_demo
 
 on:
   push:
-      branches: main
-      
+    branches:
+      - main
   workflow_dispatch: 
 
 jobs:
-    build:
-      runs-on: ubantu-latest
+  build:
+    runs-on: ubuntu-latest
 
-      steps:
-        - uses: actions/checkout@v4.2.2
-        
-        - name: run sample github
-          run: echo "starting run"
-        
-      
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run sample GitHub action
+        run: echo "starting run"
