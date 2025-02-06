@@ -39,4 +39,4 @@ jobs:
         run: |
           echo "Deploying artifact..."
           # Replace this with actual deployment logic (e.g., copying files, deploying to a server)
-          cp sample.txt /path/to/deployment/directory/
+          cp sample.txt D:\example\
