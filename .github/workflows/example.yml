@@ -40,4 +40,4 @@ jobs:
         run: |
           echo "Deploying artifact..."
           # Replace this with actual deployment logic (e.g., copying files, deploying to a server)
-          # cp sample.txt D:\example\
+          dir ${{ github.workspace }}  # For Windows runners
