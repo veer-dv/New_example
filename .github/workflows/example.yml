@@ -15,3 +15,13 @@ jobs:
 
       - name: Run sample GitHub action
         run: echo "starting run"
+      
+      - name: Create a sample file
+        run: echo "This is a sample file" > sample.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sample-artifact
+          path: sample.txt
+
