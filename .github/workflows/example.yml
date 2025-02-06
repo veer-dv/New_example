@@ -25,3 +25,18 @@ jobs:
           name: sample-artifact
           path: sample.txt
 
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download the artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: sample-artifact
+
+      - name: Deploy the artifact (example deployment)
+        run: |
+          echo "Deploying artifact..."
+          # Replace this with actual deployment logic (e.g., copying files, deploying to a server)
+          cp sample.txt /path/to/deployment/directory/
